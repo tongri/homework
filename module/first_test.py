@@ -1,4 +1,4 @@
-from functools import reduce
+
 
 def spam(number):
 
@@ -15,9 +15,6 @@ def spam(number):
 
 
 def my_sum(list_of_numbers):
-    res = 0
-    for x in list_of_numbers:
-        res += x
     """Function receives a list with integer numbers,
     should return its sum as an integer. Do not use built in summarize functions.
     :param list
@@ -26,7 +23,7 @@ def my_sum(list_of_numbers):
     Не использовать встроенные функции суммирования.
     
     """
-    return res
+    return " ".join([x[:6]+"*" if len(x) > 6 else x for x in string.split()])
     #  ...wite your code here
 
 

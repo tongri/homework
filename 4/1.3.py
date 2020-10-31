@@ -1,3 +1,5 @@
+#Practice using map and join
+
 nums = ["1", "3", "10", "45", "12"]
 
 def increase(x, nums):

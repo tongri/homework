@@ -1,4 +1,4 @@
-from functools import reduce
+
 
 def spam(number):
 
@@ -26,19 +26,12 @@ def my_sum(list_of_numbers):
     Не использовать встроенные функции суммирования.
     
     """
-    return res
+    return "res
     #  ...wite your code here
 
 
 def shortener(string):
-    words = string.split()
-    ready = []
-    for x in words:
-        if len(x) > 6:
-            x = x[:6] + "*"
-            ready.append(x)
-        else:
-            ready.append(x)
+   
 
     """
     Function receives a long string with many words.
@@ -55,7 +48,7 @@ def shortener(string):
 
 
     """
-    return " ".join(ready)
+    return " ".join([x[:6]+"*" if len(x) > 6 else x for x in string.split()])
     #  ...wite your code here
 
 

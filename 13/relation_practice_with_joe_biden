@@ -1,0 +1,405 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.0
+-- Dumped by pg_dump version 13.0
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: both_; Type: TABLE; Schema: public; Owner: antonhryb
+--
+
+CREATE TABLE public.both_ (
+    id integer NOT NULL,
+    state character varying(255)
+);
+
+
+ALTER TABLE public.both_ OWNER TO antonhryb;
+
+--
+-- Name: both__id_seq; Type: SEQUENCE; Schema: public; Owner: antonhryb
+--
+
+CREATE SEQUENCE public.both__id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.both__id_seq OWNER TO antonhryb;
+
+--
+-- Name: both__id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: antonhryb
+--
+
+ALTER SEQUENCE public.both__id_seq OWNED BY public.both_.id;
+
+
+--
+-- Name: dem_senate; Type: TABLE; Schema: public; Owner: antonhryb
+--
+
+CREATE TABLE public.dem_senate (
+    senate_id integer NOT NULL,
+    senate_state character varying(255)
+);
+
+
+ALTER TABLE public.dem_senate OWNER TO antonhryb;
+
+--
+-- Name: dem_senate_senate_id_seq; Type: SEQUENCE; Schema: public; Owner: antonhryb
+--
+
+CREATE SEQUENCE public.dem_senate_senate_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.dem_senate_senate_id_seq OWNER TO antonhryb;
+
+--
+-- Name: dem_senate_senate_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: antonhryb
+--
+
+ALTER SEQUENCE public.dem_senate_senate_id_seq OWNED BY public.dem_senate.senate_id;
+
+
+--
+-- Name: joe_and_senate; Type: TABLE; Schema: public; Owner: antonhryb
+--
+
+CREATE TABLE public.joe_and_senate (
+    id integer NOT NULL,
+    state character varying(255)
+);
+
+
+ALTER TABLE public.joe_and_senate OWNER TO antonhryb;
+
+--
+-- Name: joe_and_senate_id_seq; Type: SEQUENCE; Schema: public; Owner: antonhryb
+--
+
+CREATE SEQUENCE public.joe_and_senate_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.joe_and_senate_id_seq OWNER TO antonhryb;
+
+--
+-- Name: joe_and_senate_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: antonhryb
+--
+
+ALTER SEQUENCE public.joe_and_senate_id_seq OWNED BY public.joe_and_senate.id;
+
+
+--
+-- Name: joebiden; Type: TABLE; Schema: public; Owner: antonhryb
+--
+
+CREATE TABLE public.joebiden (
+    president_id integer NOT NULL,
+    president_state character varying(255)
+);
+
+
+ALTER TABLE public.joebiden OWNER TO antonhryb;
+
+--
+-- Name: joebiden_president_id_seq; Type: SEQUENCE; Schema: public; Owner: antonhryb
+--
+
+CREATE SEQUENCE public.joebiden_president_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.joebiden_president_id_seq OWNER TO antonhryb;
+
+--
+-- Name: joebiden_president_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: antonhryb
+--
+
+ALTER SEQUENCE public.joebiden_president_id_seq OWNED BY public.joebiden.president_id;
+
+
+--
+-- Name: only_joe; Type: TABLE; Schema: public; Owner: antonhryb
+--
+
+CREATE TABLE public.only_joe (
+    id integer NOT NULL,
+    state character varying(255)
+);
+
+
+ALTER TABLE public.only_joe OWNER TO antonhryb;
+
+--
+-- Name: only_joe_id_seq; Type: SEQUENCE; Schema: public; Owner: antonhryb
+--
+
+CREATE SEQUENCE public.only_joe_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.only_joe_id_seq OWNER TO antonhryb;
+
+--
+-- Name: only_joe_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: antonhryb
+--
+
+ALTER SEQUENCE public.only_joe_id_seq OWNED BY public.only_joe.id;
+
+
+--
+-- Name: only_senate; Type: TABLE; Schema: public; Owner: antonhryb
+--
+
+CREATE TABLE public.only_senate (
+    id integer NOT NULL,
+    state character varying(255)
+);
+
+
+ALTER TABLE public.only_senate OWNER TO antonhryb;
+
+--
+-- Name: only_senate_id_seq; Type: SEQUENCE; Schema: public; Owner: antonhryb
+--
+
+CREATE SEQUENCE public.only_senate_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.only_senate_id_seq OWNER TO antonhryb;
+
+--
+-- Name: only_senate_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: antonhryb
+--
+
+ALTER SEQUENCE public.only_senate_id_seq OWNED BY public.only_senate.id;
+
+
+--
+-- Name: both_ id; Type: DEFAULT; Schema: public; Owner: antonhryb
+--
+
+ALTER TABLE ONLY public.both_ ALTER COLUMN id SET DEFAULT nextval('public.both__id_seq'::regclass);
+
+
+--
+-- Name: dem_senate senate_id; Type: DEFAULT; Schema: public; Owner: antonhryb
+--
+
+ALTER TABLE ONLY public.dem_senate ALTER COLUMN senate_id SET DEFAULT nextval('public.dem_senate_senate_id_seq'::regclass);
+
+
+--
+-- Name: joe_and_senate id; Type: DEFAULT; Schema: public; Owner: antonhryb
+--
+
+ALTER TABLE ONLY public.joe_and_senate ALTER COLUMN id SET DEFAULT nextval('public.joe_and_senate_id_seq'::regclass);
+
+
+--
+-- Name: joebiden president_id; Type: DEFAULT; Schema: public; Owner: antonhryb
+--
+
+ALTER TABLE ONLY public.joebiden ALTER COLUMN president_id SET DEFAULT nextval('public.joebiden_president_id_seq'::regclass);
+
+
+--
+-- Name: only_joe id; Type: DEFAULT; Schema: public; Owner: antonhryb
+--
+
+ALTER TABLE ONLY public.only_joe ALTER COLUMN id SET DEFAULT nextval('public.only_joe_id_seq'::regclass);
+
+
+--
+-- Name: only_senate id; Type: DEFAULT; Schema: public; Owner: antonhryb
+--
+
+ALTER TABLE ONLY public.only_senate ALTER COLUMN id SET DEFAULT nextval('public.only_senate_id_seq'::regclass);
+
+
+--
+-- Data for Name: both_; Type: TABLE DATA; Schema: public; Owner: antonhryb
+--
+
+COPY public.both_ (id, state) FROM stdin;
+1	Oregon
+2	Minnesota
+3	New Hampshire
+4	New Mexico
+5	Virginia
+6	New Jersey
+7	Michigan
+\.
+
+
+--
+-- Data for Name: dem_senate; Type: TABLE DATA; Schema: public; Owner: antonhryb
+--
+
+COPY public.dem_senate (senate_id, senate_state) FROM stdin;
+1	Oregon
+2	Arizona
+3	New Mexico
+4	Virginia
+5	Michigan
+6	New Jersey
+7	New Hampshire
+8	Minnesota
+9	Illinois
+\.
+
+
+--
+-- Data for Name: joe_and_senate; Type: TABLE DATA; Schema: public; Owner: antonhryb
+--
+
+COPY public.joe_and_senate (id, state) FROM stdin;
+1	Wahington
+2	New York
+3	Maine
+4	Colorado
+5	California
+6	Hawaii
+\.
+
+
+--
+-- Data for Name: joebiden; Type: TABLE DATA; Schema: public; Owner: antonhryb
+--
+
+COPY public.joebiden (president_id, president_state) FROM stdin;
+1	Wahington
+2	New York
+3	Oregon
+4	Minnesota
+5	Maine
+6	New Hampshire
+7	New Mexico
+8	Colorado
+9	California
+10	Hawaii
+11	Virginia
+12	New Jersey
+13	Michigan
+\.
+
+
+--
+-- Data for Name: only_joe; Type: TABLE DATA; Schema: public; Owner: antonhryb
+--
+
+COPY public.only_joe (id, state) FROM stdin;
+7	Wahington
+8	New York
+9	Maine
+10	Colorado
+11	California
+12	Hawaii
+\.
+
+
+--
+-- Data for Name: only_senate; Type: TABLE DATA; Schema: public; Owner: antonhryb
+--
+
+COPY public.only_senate (id, state) FROM stdin;
+9	Arizona
+10	Illinois
+\.
+
+
+--
+-- Name: both__id_seq; Type: SEQUENCE SET; Schema: public; Owner: antonhryb
+--
+
+SELECT pg_catalog.setval('public.both__id_seq', 7, true);
+
+
+--
+-- Name: dem_senate_senate_id_seq; Type: SEQUENCE SET; Schema: public; Owner: antonhryb
+--
+
+SELECT pg_catalog.setval('public.dem_senate_senate_id_seq', 9, true);
+
+
+--
+-- Name: joe_and_senate_id_seq; Type: SEQUENCE SET; Schema: public; Owner: antonhryb
+--
+
+SELECT pg_catalog.setval('public.joe_and_senate_id_seq', 8, true);
+
+
+--
+-- Name: joebiden_president_id_seq; Type: SEQUENCE SET; Schema: public; Owner: antonhryb
+--
+
+SELECT pg_catalog.setval('public.joebiden_president_id_seq', 13, true);
+
+
+--
+-- Name: only_joe_id_seq; Type: SEQUENCE SET; Schema: public; Owner: antonhryb
+--
+
+SELECT pg_catalog.setval('public.only_joe_id_seq', 12, true);
+
+
+--
+-- Name: only_senate_id_seq; Type: SEQUENCE SET; Schema: public; Owner: antonhryb
+--
+
+SELECT pg_catalog.setval('public.only_senate_id_seq', 10, true);
+
+
+--
+-- PostgreSQL database dump complete
+--
+

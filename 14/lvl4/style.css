@@ -1,0 +1,15 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: green;
+}
+
+.bg-box {
+	height: 100vh;
+	background:
+		url('img/bulb2.png') 0 0 repeat-x,
+		url('img/grass.png') 0 100% repeat-x,
+		url('img/donut.png') 100% 0 repeat-y,
+		url('img/donut.png') 0 0 repeat-y,
+		url('img/house.jpg') 50% 50% no-repeat;
+}

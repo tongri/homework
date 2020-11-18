@@ -1,3 +1,19 @@
-.text-box div:nth-child(1) {
-	background-color: pink;
+.yellow {
+	color: yellow;
+}
+
+h3:first-child {
+	color: pink;
+}
+
+div + h3 + p {
+	color: green;
+}
+
+#greycol {
+	color: grey;
+}
+
+p:only-child {
+	color: red;
 }

@@ -1,0 +1,8 @@
+.top {
+	width: 330px;
+	height: 185px;
+	background-color: green;
+	padding: 15px 10px 20px 10px;
+	margin: 30px;
+	border: dotted 2px red;
+}

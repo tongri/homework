@@ -1,0 +1,15 @@
+#left {
+	float: left;
+	width: 400px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+
+#right {
+	float: right;
+	width: 350px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}

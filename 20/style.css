@@ -43,24 +43,25 @@ button:hover {
 }
 
 .single{
+	padding-left: 25px;
 	background-color: black;
 	padding-top: 50px;
 	position: relative;
-	height: 550px;
+	width: 100vw;
+	height: 70px;
 }
 
 
 
 .single img {
 	position: absolute;
-	right: 500px;
-	min-height: 500px;
+	right: 10%;
+	margin-left: 30px;
+	height: 500px;
 	width: 340px;
 }
 
 .single h3{
 	margin-left: 30px;
-	vertical-align: center;
-	display: inline;
 	color: white;
 }

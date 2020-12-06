@@ -13,6 +13,8 @@ const search = (input) =>{
 let button = document.getElementById('search');
 const body = document.querySelectorAll('body');
 
+let n = 0;
+
 button.addEventListener('click', () => {
 	let input = document.getElementById('film').value;
 	console.log(input);
@@ -37,6 +39,12 @@ button.addEventListener('click', () => {
 					img.src = items[`${i}`]['show']['image']['original'];
 					div_f_film.style.height = "550px";
 				}
+				if (n % 2){
+					div_f_film.style.backgroundColor = "white";
+					h3.style.color = "black";
+				}
+				n++;
 			}
 		})
 });
+

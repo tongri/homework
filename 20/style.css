@@ -48,17 +48,21 @@ button:hover {
 	padding-top: 50px;
 	position: relative;
 	width: 100vw;
-	height: 70px;
+
 }
 
 
 
 .single img {
+	display: block;
 	position: absolute;
 	right: 10%;
-	margin-left: 30px;
-	height: 500px;
-	width: 340px;
+	margin-left: 100px;
+	width: 85%;
+	height: auto;
+	max-width: 340px;
+	max-height: 500px;
+	
 }
 
 .single h3{

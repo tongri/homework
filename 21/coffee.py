@@ -1,6 +1,4 @@
 
-
-
 class CoffeeMachine:
 	amount_of_water = 100
 	amount_of_grain = 40
@@ -88,11 +86,8 @@ class CoffeeMachineMilked(CoffeeMachine):
 		a = []
 
 		if self.is_full(2):
-			check = input("Would u like 2 clear it? (y/n)")
-			if check == 'y':
-				self.clear()
-			else:
-				return
+			
+			self.clear()
 
 
 		if self.not_enough_water(4):
@@ -119,13 +114,8 @@ class CoffeeMachineMilked(CoffeeMachine):
 
 	def make_capuccino(self):
 		a = []
-
 		if self.is_full(30):
-			check = input("Would u like 2 clear it? (y/n)")
-			if check == 'y':
-				self.clear()
-			else:
-				return
+			self.clear()
 
 
 		if self.not_enough_water(3):
@@ -168,11 +158,7 @@ class CoffeeMachineMilkedBolgrad(CoffeeMachineMilked):
 		a = []
 
 		if self.is_full(10):
-			check = input("Would u like 2 clear it? (y/n)")
-			if check == 'y':
-				self.clear()
-			else:
-				return
+			self.clear()
 
 		if self.not_enough_water(3):
 			a.append('water')

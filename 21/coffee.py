@@ -141,10 +141,7 @@ class CoffeeMachineMilked(CoffeeMachine):
 
 
 
-cup = CoffeeMachineMilked()
 
-for _ in range(10):
-	cup.make_capuccino()
 
 
 class CoffeeMachineMilkedBolgrad(CoffeeMachineMilked):
@@ -171,12 +168,18 @@ class CoffeeMachineMilkedBolgrad(CoffeeMachineMilked):
 
 		if self.not_enough_alcochole(4):
 			a.append('alcochole')
-
 		if a:
-			for x in a:
-				print('Not enough {}'.format(x))
-				
+			[print("Not enough {}".format(x) for x in a)]
 			return
+		print("Take your Irish Coffe")
 
+		self.amount_of_water -= 3
+		self.amount_of_milk -= 5
+		self.amount_of_grain -= 4
+		self.amount_of_alcochole -= 4
+		self.increase_garbage(30)
 
+cup = CoffeeMachineMilkedBolgrad()
 
+for _ in range(10):
+	cup.make_irish_coffee()

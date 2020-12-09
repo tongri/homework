@@ -169,7 +169,7 @@ class CoffeeMachineMilkedBolgrad(CoffeeMachineMilked):
 		if self.not_enough_alcochole(4):
 			a.append('alcochole')
 		if a:
-			[print("Not enough {}".format(x) for x in a)]
+			print("Not enough {}".format(x for x in a))
 			return
 		print("Take your Irish Coffe")
 

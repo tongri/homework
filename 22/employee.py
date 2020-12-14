@@ -116,5 +116,6 @@ print(f'Programmer {programmist2.name} knows {", ".join(programmist2.tech_stack)
 
 print(f'Alpha programmer knows {", ".join(programmist1 + programmist2)}\n')
 
-
+if __name__ == '__main__':
+    pass
 

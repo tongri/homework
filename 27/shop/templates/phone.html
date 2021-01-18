@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-
 {% block some_info %}
-    <h1>Articles</h1>
+    {% for d in phone %}
+        {{ d }}<br>
+    {% endfor %}
 {% endblock %}
